@@ -41,6 +41,7 @@ Site Adapter
 Trusted Novus Runtime
     ↓
 Sandboxed Generated Micro-App
+```
 
 ### Site Adapter
 The adapter translates messy website HTML into clean typed entities.
