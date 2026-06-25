@@ -1,35 +1,35 @@
 # Novus
 
-> A browser platform that turns a user’s natural-language request into a safe, persistent micro-app that works alongside the website they are already using.[cite: 1, 9]
+> A browser platform that turns a user’s natural-language request into a safe, persistent micro-app that works alongside the website they are already using.
 
 ## The Idea
 
-Websites are built for average workflows. But every person needs something slightly different.[cite: 1]
+Websites are built for average workflows. But every person needs something slightly different.
 
 A user may be looking at:
 
-* an employee dashboard and need department analytics[cite: 1]
-* GitHub and need a PR review workspace[cite: 1, 9]
-* LeetCode and need a revision queue[cite: 1, 9]
-* YouTube and need a learning tracker[cite: 9]
+* an employee dashboard and need department analytics
+* GitHub and need a PR review workspace
+* LeetCode and need a revision queue
+* YouTube and need a learning tracker
 
-Novus adds a personal workspace layer on top of the website already open in the browser.[cite: 1, 9]
-The user describes what they need.[cite: 1] Novus creates a persistent micro-app beside the website.[cite: 1]
+Novus adds a personal workspace layer on top of the website already open in the browser.
+The user describes what they need. Novus creates a persistent micro-app beside the website.
 
 ## Example
 
-On a paginated employee dashboard, a user asks:[cite: 1]
+On a paginated employee dashboard, a user asks:
 
-> Collect all employee pages, group active employees by department, save a monthly snapshot, and draft a report.[cite: 1, 5]
+> Collect all employee pages, group active employees by department, save a monthly snapshot, and draft a report.
 
 Novus:
 
-1. detects the available employee table and pagination[cite: 5]
-2. asks before collecting additional pages[cite: 1, 5]
-3. collects rows through the visible UI[cite: 5]
-4. deduplicates records and shows data coverage[cite: 1, 5]
-5. creates a persistent analytics workspace[cite: 1, 5]
-6. restores the workspace when the user returns[cite: 1, 9]
+1. detects the available employee table and pagination
+2. asks before collecting additional pages
+3. collects rows through the visible UI
+4. deduplicates records and shows data coverage
+5. creates a persistent analytics workspace
+6. restores the workspace when the user returns
 
 ## Architecture
 
@@ -40,60 +40,59 @@ Site Adapter
 Trusted Novus Runtime
     ↓
 Sandboxed Generated Micro-App
-[cite: 9]
 
 ### Site Adapter
-The adapter translates messy website HTML into clean typed entities.[cite: 1]
+The adapter translates messy website HTML into clean typed entities.
 
 type Employee = {
   id: string;
   name: string;
   department: string;
   status: "ACTIVE" | "INACTIVE";
-};[cite: 1]
+};
 
 ### Trusted Runtime
 The runtime controls:
 
-* permissions[cite: 1, 9]
-* data collection approval[cite: 1, 9]
-* local storage[cite: 1, 9]
-* feature lifecycle[cite: 1, 9]
-* route changes[cite: 9]
-* manifest validation[cite: 9]
-* typed communication with generated apps[cite: 9]
+* permissions
+* data collection approval
+* local storage
+* feature lifecycle
+* route changes
+* manifest validation
+* typed communication with generated apps
 
 ### Generated Micro-App
-AI creates the product layer:[cite: 1]
+AI creates the product layer:
 
-* dashboards[cite: 1]
-* charts[cite: 1, 5]
-* filters[cite: 1, 5]
-* calculations[cite: 1, 5]
-* notes[cite: 1, 5]
-* report drafts[cite: 1, 5]
-* local workflow state[cite: 5]
+* dashboards
+* charts
+* filters
+* calculations
+* notes
+* report drafts
+* local workflow state
 
-The generated app does not get unrestricted access to the website DOM, cookies, tokens, or extension APIs.[cite: 9]
+The generated app does not get unrestricted access to the website DOM, cookies, tokens, or extension APIs.
 
 ## MVP
-The first demo is a controlled Acme HR dashboard.[cite: 1]
+The first demo is a controlled Acme HR dashboard.
 
-* Open Acme HR dashboard[cite: 1]
-* → ask for workforce analytics[cite: 1]
-* → approve collection across paginated pages[cite: 1]
-* → see progress and coverage[cite: 1]
-* → receive a native-looking right-side workspace[cite: 1]
-* → reload the page[cite: 1]
-* → workspace and saved state return[cite: 1]
+* Open Acme HR dashboard
+* → ask for workforce analytics
+* → approve collection across paginated pages
+* → see progress and coverage
+* → receive a native-looking right-side workspace
+* → reload the page
+* → workspace and saved state return
 
 ## What Novus Is Not
 
-* not a promise to work on every website[cite: 1, 9]
-* not an unrestricted AI userscript generator[cite: 1, 9]
-* not a tool for reading private databases or tokens[cite: 1, 9]
-* not a replacement for official APIs[cite: 9]
-* not an automatic email sender in v1[cite: 1]
+* not a promise to work on every website
+* not an unrestricted AI userscript generator
+* not a tool for reading private databases or tokens
+* not a replacement for official APIs
+* not an automatic email sender in v1
 
 ## Repository Structure
 
@@ -113,10 +112,9 @@ packages/
 tests/
   e2e/
   adapter-fixtures/
-[cite: 10]
 
 ## Contributing
-Read CONTRIBUTING.md before opening a pull request.[cite: 10]
+Read CONTRIBUTING.md before opening a pull request.
 
 ## Governance
 Read GOVERNANCE.md.
