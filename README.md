@@ -34,11 +34,17 @@ Novus:
 ## Architecture
 
 Host Website
+
     ↓
+    
 Site Adapter
+
     ↓
+    
 Trusted Novus Runtime
+
     ↓
+    
 Sandboxed Generated Micro-App
 
 ### Site Adapter
