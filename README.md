@@ -114,10 +114,10 @@ tests/
   adapter-fixtures/
 
 ## Contributing
-Read CONTRIBUTING.md before opening a pull request.
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
 
 ## Governance
-Read GOVERNANCE.md.
+Read [GOVERNANCE.md](./GOVERNANCE.md)
 
 ## License
 License decision pending founding-team agreement.
