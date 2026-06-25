@@ -11,7 +11,6 @@ Thanks for contributing.
 
 ## Workflow
 
-```text
 Issue
 → assign/comment
 → create branch
@@ -20,3 +19,31 @@ Issue
 → open pull request
 → review
 → merge
+
+## Branch Names
+
+Use clear names:
+
+- `feat/new-feature`
+- `fix/bug-name`
+- `docs/update-readme`
+- `test/add-tests`
+
+## Pull Requests
+
+A pull request should include:
+
+- what changed
+- why it changed
+- screenshots for UI changes
+- tests added or updated
+- known limitations
+- linked issue
+
+## Rules
+
+- Do not push directly to `main`.
+- Do not commit secrets, API keys, `.env` files, or tokens.
+- Keep pull requests focused.
+- Ask before adding major dependencies.
+- Generated AI output must be validated before use.
